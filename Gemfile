@@ -19,6 +19,7 @@ gem 'active_admin_importable'
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '~> 2'
 gem 'aws-s3', require: false
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'dotenv-rails'

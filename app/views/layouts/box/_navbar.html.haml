@@ -1,0 +1,11 @@
+%nav.navbar.navbar-default
+  .navbar-header
+    = link_to 'Решетки', root_path, class: 'navbar-brand'
+  .actions
+    - if current_user
+      %span.name= current_user.name
+      = link_to destroy_user_session_path, method: 'delete', title: 'Sign Out' do
+        = fa_icon 'sign-out 2x', class: 'black-color'
+    - else
+      = link_to new_user_session_path, title: 'Sign In' do
+        = fa_icon 'sign-in 2x', class: 'black-color'
