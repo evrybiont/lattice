@@ -1,0 +1,12 @@
+.col-xs-12.col-sm-3.col-md-3.col-lg-3
+  .product
+    .product-img
+      = link_to '#', title: product.name do
+        .fade-container
+          .mask
+          = image_tag product.avatar, class: 'image'
+    .footer
+      .name{title: product.name}= product.name
+      .end
+        .tc= "#{product.price} грн"
+        .tc= link_to 'Купить', '#', class: 'btn btn-danger'
