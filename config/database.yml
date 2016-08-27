@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: admin
+  password: password
+
+development:
+  <<: *default
+  database: lattice_development
+
+test:
+  <<: *default
+  database: lattice_test
+
+production:
+  <<: *default
+  database: lattice_production
+  username: lattice
+  password: <%= ENV['LATTICE_DATABASE_PASSWORD'] %>
