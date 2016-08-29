@@ -1,4 +1,5 @@
 ActiveAdmin.register Product do
+  menu priority: 1
   active_admin_importable
 
   permit_params :name, :description, :price, images_attributes: [:id, :data]
